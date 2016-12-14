@@ -8,8 +8,8 @@
 #include <linux/kd.h>
 
 #define DEVICE      "/dev/tty0"
-#define LED         K_NUMLOCK    //Caps Lock Led
-#define ERROR       -1
+#define LED         K_NUMLOCK       //Num Lock Led
+#define ERROR       ~(0)
 
 class Keyboard {
 private:

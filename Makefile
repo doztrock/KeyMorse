@@ -1,7 +1,7 @@
 CC=g++
 CFLAGS=-Wall -O3
 
-OBJECTS=keymorse.o Keyboard.o
+OBJECTS=keymorse.o Keyboard.o morse.o
 
 KEYMORSE=keymorse
 

@@ -10,6 +10,8 @@
       <in>Keyboard.cpp</in>
       <in>Keyboard.hpp</in>
       <in>keymorse.cpp</in>
+      <in>morse.cpp</in>
+      <in>morse.hpp</in>
     </df>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
