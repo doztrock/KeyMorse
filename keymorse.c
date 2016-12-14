@@ -1,18 +1,22 @@
-#include <stdio.h>
 #include <stdlib.h>
-#include "libkm.h"
+#include "Keyboard.hpp"
 
 int main(void) {
 
-    /**
-     * Let's open the device
-     */
-    if (openKeyBoard(KEYBOARD) == ERROR) {
-        perror("Error opening device...");
-        return EXIT_FAILURE;
-    }
+    Keyboard keyboard;
+
+    keyboard.test();
+    
+    //keyboard->open();
+
+/*
+    keyboard->turnOn();
+    sleep(3);
+*/
 
 
+
+//    keyboard.close();
 
     return EXIT_SUCCESS;
 }
