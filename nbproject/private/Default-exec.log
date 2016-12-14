@@ -1,15 +1,13 @@
 called: g++
-	/home/ivan/Desktop/KeyMorse
+	/home/usuario/Desktop/KeyMorse
 	g++
-	-Wall
-	-O3
 	-c
-	keymorse.c
 	-o
 	keymorse.o
+	keymorse.cpp
 
 called: g++
-	/home/ivan/Desktop/KeyMorse
+	/home/usuario/Desktop/KeyMorse
 	g++
 	-c
 	-o
@@ -17,7 +15,7 @@ called: g++
 	Keyboard.cpp
 
 called: g++
-	/home/ivan/Desktop/KeyMorse
+	/home/usuario/Desktop/KeyMorse
 	g++
 	-Wall
 	-O3
@@ -27,41 +25,30 @@ called: g++
 	keymorse
 
 called: /usr/bin/ld
-	/home/ivan/Desktop/KeyMorse
+	/home/usuario/Desktop/KeyMorse
 	/usr/bin/ld
-	-plugin
-	/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so
-	-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper
-	-plugin-opt=-fresolution=/tmp/ccZC7aSW.res
-	-plugin-opt=-pass-through=-lgcc_s
-	-plugin-opt=-pass-through=-lgcc
-	-plugin-opt=-pass-through=-lc
-	-plugin-opt=-pass-through=-lgcc_s
-	-plugin-opt=-pass-through=-lgcc
 	--sysroot=/
 	--build-id
+	--no-add-needed
 	--eh-frame-hdr
 	-m
-	elf_x86_64
-	--hash-style=gnu
-	--as-needed
+	elf_i386
+	--hash-style=both
 	-dynamic-linker
-	/lib64/ld-linux-x86-64.so.2
-	-z
-	relro
+	/lib/ld-linux.so.2
 	-o
 	keymorse
-	/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o
-	/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o
-	/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o
-	-L/usr/lib/gcc/x86_64-linux-gnu/5
-	-L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu
-	-L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib
-	-L/lib/x86_64-linux-gnu
+	/usr/lib/gcc/i486-linux-gnu/4.7/../../../i386-linux-gnu/crt1.o
+	/usr/lib/gcc/i486-linux-gnu/4.7/../../../i386-linux-gnu/crti.o
+	/usr/lib/gcc/i486-linux-gnu/4.7/crtbegin.o
+	-L/usr/lib/gcc/i486-linux-gnu/4.7
+	-L/usr/lib/gcc/i486-linux-gnu/4.7/../../../i386-linux-gnu
+	-L/usr/lib/gcc/i486-linux-gnu/4.7/../../../../lib
+	-L/lib/i386-linux-gnu
 	-L/lib/../lib
-	-L/usr/lib/x86_64-linux-gnu
+	-L/usr/lib/i386-linux-gnu
 	-L/usr/lib/../lib
-	-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..
+	-L/usr/lib/gcc/i486-linux-gnu/4.7/../../..
 	keymorse.o
 	Keyboard.o
 	-lstdc++
@@ -71,6 +58,6 @@ called: /usr/bin/ld
 	-lc
 	-lgcc_s
 	-lgcc
-	/usr/lib/gcc/x86_64-linux-gnu/5/crtend.o
-	/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
+	/usr/lib/gcc/i486-linux-gnu/4.7/crtend.o
+	/usr/lib/gcc/i486-linux-gnu/4.7/../../../i386-linux-gnu/crtn.o
 

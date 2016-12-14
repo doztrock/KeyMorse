@@ -12,6 +12,11 @@ all: $(OBJECTS)
 .PHONY:clean
 clean:
 	rm -f $(KEYMORSE) $(OBJECTS)
+	+$(MAKE) --directory=examples/ clean
+	
+.PHONY:examples
+examples:
+	+$(MAKE) --directory=examples/
 	
 .c.o:
 	$(CC) $(CFLAGS) -c $< -o $@

@@ -1,3 +1,3 @@
-g++ -Wall -O3 -c keymorse.c -o keymorse.o
+g++    -c -o keymorse.o keymorse.cpp
 g++    -c -o Keyboard.o Keyboard.cpp
 g++ -Wall -O3 keymorse.o Keyboard.o -o keymorse

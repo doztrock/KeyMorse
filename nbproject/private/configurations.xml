@@ -3,7 +3,6 @@
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <df root="." name="0">
       <df name="examples">
-        <in>Makefile</in>
         <in>example-1.cpp</in>
         <in>example-2.cpp</in>
         <in>example-3.cpp</in>

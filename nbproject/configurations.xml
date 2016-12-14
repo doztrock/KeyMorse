@@ -2,10 +2,8 @@
 <configurationDescriptor version="100">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <df root="." name="0">
-      <df name="examples">
-        <in>Makefile</in>
-      </df>
       <in>Keyboard.cpp</in>
+      <in>keymorse.cpp</in>
     </df>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -43,7 +41,7 @@
       </makefileType>
       <item path="Keyboard.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="examples/Makefile" ex="false" tool="3" flavor2="0">
+      <item path="keymorse.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
   </confs>
