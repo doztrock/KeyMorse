@@ -5,7 +5,6 @@
       <in>Keyboard.cpp</in>
       <in>Keyboard.hpp</in>
       <in>keymorse.c</in>
-      <in>libkm.c</in>
     </df>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>

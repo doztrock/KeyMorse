@@ -5,18 +5,11 @@ int main(void) {
 
     Keyboard keyboard;
 
-    keyboard.test();
+    keyboard.init();
+
+    keyboard.turnOn();
     
-    //keyboard->open();
-
-/*
-    keyboard->turnOn();
-    sleep(3);
-*/
-
-
-
-//    keyboard.close();
+    keyboard.deinit();
 
     return EXIT_SUCCESS;
 }

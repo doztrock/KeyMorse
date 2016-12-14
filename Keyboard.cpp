@@ -5,14 +5,6 @@
  */
 Keyboard::Keyboard(void) {
     this->status = 0;
-    
-    
-
-    
-    
-    
-    
-    
 }
 
 /**
@@ -32,7 +24,11 @@ void Keyboard::init() {
  * Close the device's file descriptor
  */
 void Keyboard::deinit() {
-    close(this->descriptor);
+
+    if (close(this->descriptor) == ERROR) {
+        perror("Error closing device...");
+    }
+
 }
 
 /**
@@ -41,15 +37,12 @@ void Keyboard::deinit() {
 void Keyboard::turnOn(void) {
 
     this->descriptor = ::open(DEVICE, O_NOCTTY);
-    
+
     if (ioctl(this->descriptor, KDSKBLED, LED) == ERROR) {
         perror("Error turning on...");
         return;
     }
 
-    printf("%d\n", this->descriptor);
-    
-    this->getStatus();
 }
 
 /**
@@ -62,25 +55,4 @@ void Keyboard::getStatus() {
         return;
     }
 
-}
-
-void Keyboard::test() {
-        
-    int fd = open("/dev/tty0", O_NOCTTY);
-
-    if (fd == -1){
-        perror("open");
-        return;
-    }
-    
-    if (-1 == ioctl(fd, KDSKBLED, K_CAPSLOCK)){
-        perror("ioctl set");
-        close(fd);
-        return;
-    }
-    
-    close(fd);
-    
-    return;
-    
 }

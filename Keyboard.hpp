@@ -27,8 +27,7 @@ public:
 
     void turnOn(void);
     void turnOff(void);
-    
-    void test(void);
+
 };
 
 #endif /* KEYBOARD_HPP */
