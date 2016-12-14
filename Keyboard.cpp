@@ -36,10 +36,23 @@ void Keyboard::deinit() {
  */
 void Keyboard::turnOn(void) {
 
-    this->descriptor = ::open(DEVICE, O_NOCTTY);
-
     if (ioctl(this->descriptor, KDSKBLED, LED) == ERROR) {
         perror("Error turning on...");
+        return;
+    }
+
+    this->getStatus();
+}
+
+/**
+ * Turn On the led
+ */
+void Keyboard::turnOff(void) {
+
+    this->getStatus();
+
+    if (ioctl(this->descriptor, KDSKBLED, this->status ^ LED) == ERROR) {
+        perror("Error turning off...");
         return;
     }
 

@@ -8,7 +8,14 @@ int main(void) {
     keyboard.init();
 
     keyboard.turnOn();
-    
+    sleep(2);
+
+    keyboard.turnOff();
+    sleep(2);
+
+    keyboard.turnOn();
+    sleep(2);
+
     keyboard.deinit();
 
     return EXIT_SUCCESS;
