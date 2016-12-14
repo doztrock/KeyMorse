@@ -4,13 +4,13 @@
     <df root="." name="0">
       <df name="examples">
         <in>Makefile</in>
-        <in>example-1.c</in>
-        <in>example-2.c</in>
-        <in>example-3.c</in>
+        <in>example-1.cpp</in>
+        <in>example-2.cpp</in>
+        <in>example-3.cpp</in>
       </df>
       <in>Keyboard.cpp</in>
       <in>Keyboard.hpp</in>
-      <in>keymorse.c</in>
+      <in>keymorse.cpp</in>
     </df>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
