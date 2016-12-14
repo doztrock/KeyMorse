@@ -7,14 +7,16 @@ int main(void) {
 
     keyboard.init();
 
-    keyboard.turnOn();
-    sleep(2);
+    for (int i = 0; i < 100; i++) {
 
-    keyboard.turnOff();
-    sleep(2);
+        if (i % 2 == 0) {
+            keyboard.turnOn();
+        } else {
+            keyboard.turnOff();
+        }
 
-    keyboard.turnOn();
-    sleep(2);
+        usleep(500000);
+    }
 
     keyboard.deinit();
 
