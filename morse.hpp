@@ -16,4 +16,14 @@
 #define PAUSE_BETWEEN_CHARACTER 100000      //Miliseconds
 #define PAUSE_BETWEEN_WORD      500000      //Miliseconds
 
+/* Alphabet */
+#define ALPHABET_SIZE           32
+#define MAX_CHARACTER_LENGTH    5
+
+const int ALPHABET_MORSE[ALPHABET_SIZE][MAX_CHARACTER_LENGTH] = {
+    {DOT, DASH}, //A
+    {DASH, DOT, DOT, DOT},//B
+    {DASH,DOT,DASH,DOT}
+};
+
 #endif /* MORSE_HPP */
