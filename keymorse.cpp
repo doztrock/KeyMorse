@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include "Keyboard.hpp"
+#include "morse.hpp"
 
 int main(void) {
 

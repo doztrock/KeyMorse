@@ -1,6 +1,7 @@
 #ifndef MORSE_HPP
 #define MORSE_HPP
 
+#include <unistd.h>
 #include "Keyboard.hpp"
 
 /* Elements */
@@ -8,7 +9,7 @@
 #define DASH    (2<<1)
 
 /* Duration */
-#define DOT_DURATION    10000               //Miliseconds
+#define DOT_DURATION    300000              //Miliseconds
 #define DASH_DURATION   DOT_DURATION * 3    //Miliseconds
 
 /* Pauses */
@@ -70,5 +71,11 @@ const char ALPHABET[ALPHABET_SIZE] = {
     'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '1',
     '2', '3', '4', '5', '6', '7', '8', '9', '0'
 };
+
+/**
+ * Methods
+ */
+void dot(Keyboard keyboard);
+void dash(Keyboard keyboard);
 
 #endif /* MORSE_HPP */
