@@ -1,7 +1,6 @@
 #ifndef MORSE_HPP
 #define MORSE_HPP
 
-#include <vector>
 #include "Keyboard.hpp"
 
 /* Elements */
@@ -20,6 +19,9 @@
 #define ALPHABET_SIZE           36
 #define MAX_CHARACTER_LENGTH    5
 
+/**
+ * Morse Alphabet
+ */
 const int ALPHABET_MORSE[ALPHABET_SIZE][MAX_CHARACTER_LENGTH] = {
     {DOT, DASH}, //A
     {DASH, DOT, DOT, DOT}, //B
@@ -57,6 +59,16 @@ const int ALPHABET_MORSE[ALPHABET_SIZE][MAX_CHARACTER_LENGTH] = {
     {DASH, DASH, DASH, DOT, DOT}, //8
     {DASH, DASH, DASH, DASH, DOT}, //9
     {DASH, DASH, DASH, DASH, DASH} //0
+};
+
+/**
+ * Human Alphabet
+ */
+const char ALPHABET[ALPHABET_SIZE] = {
+    'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
+    'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
+    'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '1',
+    '2', '3', '4', '5', '6', '7', '8', '9', '0'
 };
 
 #endif /* MORSE_HPP */
