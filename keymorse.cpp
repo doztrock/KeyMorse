@@ -4,11 +4,14 @@
 
 int main(void) {
 
-    Keyboard keyboard;
+//    Keyboard keyboard;
+//
+//    keyboard.init();
+//
+//    keyboard.deinit();
 
-    keyboard.init();
-
-    keyboard.deinit();
-
+    text2morse("C");
+    
+    
     return EXIT_SUCCESS;
 }

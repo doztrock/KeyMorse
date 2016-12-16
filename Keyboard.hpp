@@ -9,7 +9,11 @@
 
 #define DEVICE      "/dev/tty0"
 #define LED         K_NUMLOCK       //Num Lock Led
+
+//Error Code
+#ifndef ERROR
 #define ERROR       ~(0)
+#endif
 
 class Keyboard {
 private:

@@ -1,8 +1,15 @@
 #ifndef MORSE_HPP
 #define MORSE_HPP
 
+#include <iostream>
 #include <unistd.h>
+#include <string>
 #include "Keyboard.hpp"
+
+//Error Code
+#ifndef ERROR
+#define ERROR       ~(0)
+#endif
 
 /* Elements */
 #define DOT     (1<<1)
@@ -23,7 +30,7 @@
 /**
  * Morse Alphabet
  */
-const int ALPHABET_MORSE[ALPHABET_SIZE][MAX_CHARACTER_LENGTH] = {
+int ALPHABET_MORSE[ALPHABET_SIZE][MAX_CHARACTER_LENGTH] = {
     {DOT, DASH}, //A
     {DASH, DOT, DOT, DOT}, //B
     {DASH, DOT, DASH, DOT}, //C
@@ -77,5 +84,8 @@ const char ALPHABET[ALPHABET_SIZE] = {
  */
 void dot(Keyboard keyboard);
 void dash(Keyboard keyboard);
+void text2morse(std::string text);
+void getMorseLetter(char letter, int buffer[MAX_CHARACTER_LENGTH]);
+int getLetterIndexHumanAlphabet(char letter);
 
 #endif /* MORSE_HPP */
