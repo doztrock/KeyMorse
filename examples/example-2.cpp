@@ -1,5 +1,20 @@
+/**
+ * Example 2
+ * 
+ * HELP!!!
+ * 
+ * Your computer ask you for help!
+ * 
+ * With the SOS Morse message:
+ * 
+ * . . .  _ _ _  . . . (3 dots, 3 dashes, 3 dots)
+ * 
+ */
+
+#include <unistd.h>
 #include <stdlib.h>
 #include "../Keyboard.hpp"
+#include "../morse.hpp"
 
 int main(void) {
 
@@ -7,14 +22,26 @@ int main(void) {
 
     keyboard.init();
 
-    keyboard.turnOn();
-    sleep(2);
+    // S
+    dot(keyboard);
+    dot(keyboard);
+    dot(keyboard);
 
-    keyboard.turnOff();
-    sleep(2);
+    usleep(PAUSE_BETWEEN_CHARACTER);
 
-    keyboard.turnOn();
-    sleep(2);
+    // O    
+    dash(keyboard);
+    dash(keyboard);
+    dash(keyboard);
+
+    usleep(PAUSE_BETWEEN_CHARACTER);
+
+    // S
+    dot(keyboard);
+    dot(keyboard);
+    dot(keyboard);
+
+    usleep(PAUSE_BETWEEN_WORD);
 
     keyboard.deinit();
 

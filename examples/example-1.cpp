@@ -1,3 +1,12 @@
+/**
+ * Example 1
+ * 
+ * Would you like to test your keyboard?
+ *  
+ * Let's build this code!!!
+ * 
+ */
+
 #include <stdlib.h>
 #include "../Keyboard.hpp"
 
