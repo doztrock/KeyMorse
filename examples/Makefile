@@ -2,7 +2,7 @@ CC=g++
 CFLAGS=-Wall -O3
 
 HEADER=Keyboard.o morse.o
-EXAMPLES=example-1 example-2
+EXAMPLES=example-1 example-2 example-3
 
 .PHONY:all
 all: $(EXAMPLES)
@@ -24,6 +24,10 @@ example-1: $(HEADER) example-1.o
 # Example 2
 example-2: $(HEADER) example-2.o
 	$(CC) $(CFLAGS) $(HEADER) example-2.o -o example-2
+
+# Example 3
+example-3: $(HEADER) example-3.o
+	$(CC) $(CFLAGS) $(HEADER) example-3.o -o example-3
 
 .c.o:
 	$(CC) $(CFLAGS) -c $< -o $@
