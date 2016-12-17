@@ -20,7 +20,7 @@
 #define DASH_DURATION   DOT_DURATION * 3    //Miliseconds
 
 /* Pauses */
-#define PAUSE_BETWEEN_CHARACTER 100000      //Miliseconds
+#define PAUSE_BETWEEN_CHARACTER 250000      //Miliseconds
 #define PAUSE_BETWEEN_WORD      500000      //Miliseconds
 
 /* Alphabet */
@@ -30,7 +30,7 @@
 /**
  * Morse Alphabet
  */
-int ALPHABET_MORSE[ALPHABET_SIZE][MAX_CHARACTER_LENGTH] = {
+const int ALPHABET_MORSE[ALPHABET_SIZE][MAX_CHARACTER_LENGTH] = {
     {DOT, DASH}, //A
     {DASH, DOT, DOT, DOT}, //B
     {DASH, DOT, DASH, DOT}, //C
@@ -84,8 +84,8 @@ const char ALPHABET[ALPHABET_SIZE] = {
  */
 void dot(Keyboard keyboard);
 void dash(Keyboard keyboard);
-void text2morse(std::string text);
-void getMorseLetter(char letter, int buffer[MAX_CHARACTER_LENGTH]);
+void text2morse(std::string text, Keyboard keyboard);
 int getLetterIndexHumanAlphabet(char letter);
+void writeMorse(const int letter[MAX_CHARACTER_LENGTH], Keyboard keyboard);
 
 #endif /* MORSE_HPP */

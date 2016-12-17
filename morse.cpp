@@ -1,7 +1,7 @@
 #include "morse.hpp"
 
 /**
- * Blink the Led as a Dot
+ * Blink the Led as a Dot.
  */
 void dot(Keyboard keyboard) {
     keyboard.turnOn();
@@ -11,7 +11,7 @@ void dot(Keyboard keyboard) {
 }
 
 /**
- * Blink the Led as a Dash
+ * Blink the Led as a Dash.
  */
 void dash(Keyboard keyboard) {
     keyboard.turnOn();
@@ -23,39 +23,38 @@ void dash(Keyboard keyboard) {
 /**
  * Convert the text to array with DOT and DASH elements.
  */
-void text2morse(std::string text) {
+void text2morse(std::string text, Keyboard keyboard) {
 
     char letter;
-    int buffer[MAX_CHARACTER_LENGTH];
+    int indexMorse;
 
-    for (int index = 0; index < text.size(); index++) {
+    for (unsigned int index = 0; index < text.size(); index++) {
 
         letter = text.at(index);
+        indexMorse = getLetterIndexHumanAlphabet(letter);
 
-        std::cout << "Writing letter " << letter << "..." << std::endl;
+        if (letter != ' ') {
 
-        getMorseLetter(letter, buffer);
+            std::cout << "Writing letter " << letter << "..." << std::endl;
+            writeMorse(ALPHABET_MORSE[indexMorse], keyboard);
 
-    }
+            usleep(PAUSE_BETWEEN_CHARACTER);
 
-    std::cout << buffer[0] << std::endl;
-    std::cout << buffer[0] << std::endl;
-    std::cout << buffer[0] << std::endl;
-    std::cout << buffer[0] << std::endl;
+        } else {
 
+            std::cout << "-----------ESPACE----------" << std::endl;
 
-}
+            usleep(PAUSE_BETWEEN_WORD);
 
-void getMorseLetter(char letter, int buffer[MAX_CHARACTER_LENGTH]) {
+        }
 
-    int index = getLetterIndexHumanAlphabet(letter);
-
-    if (index != ERROR) {
-        buffer = ALPHABET_MORSE[index];
     }
 
 }
 
+/**
+ * Find the letter in the human alphabet and returns its index.
+ */
 int getLetterIndexHumanAlphabet(char letter) {
 
     for (int index = 0; index < ALPHABET_SIZE; index++) {
@@ -67,4 +66,27 @@ int getLetterIndexHumanAlphabet(char letter) {
     }
 
     return ERROR;
+}
+
+/**
+ * Write physically the letter in the great Morse code.
+ */
+void writeMorse(const int letter[MAX_CHARACTER_LENGTH], Keyboard keyboard) {
+
+    for (int index = 0; index < MAX_CHARACTER_LENGTH; index++) {
+
+        switch (letter[index]) {
+
+            case DOT:
+                dot(keyboard);
+                break;
+
+            case DASH:
+                dash(keyboard);
+                break;
+
+        }
+
+    }
+
 }
