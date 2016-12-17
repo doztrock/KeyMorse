@@ -8,7 +8,7 @@
 #include <linux/kd.h>
 
 #define DEVICE      "/dev/tty0"
-#define LED         K_CAPSLOCK          //Caps Lock Led
+#define LED         K_NUMLOCK           //Num Lock Led
 
 //Error Code
 #ifndef ERROR

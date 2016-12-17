@@ -16,12 +16,12 @@
 #define DASH    (2<<1)
 
 /* Duration */
-#define DOT_DURATION    300000              //Miliseconds
+#define DOT_DURATION    100000              //Miliseconds
 #define DASH_DURATION   DOT_DURATION * 3    //Miliseconds
 
 /* Pauses */
-#define PAUSE_BETWEEN_CHARACTER 250000      //Miliseconds
-#define PAUSE_BETWEEN_WORD      500000      //Miliseconds
+#define PAUSE_BETWEEN_CHARACTER DOT_DURATION * 3        //Miliseconds
+#define PAUSE_BETWEEN_WORD      DOT_DURATION * 5        //Miliseconds
 
 /* Alphabet */
 #define ALPHABET_SIZE           36
