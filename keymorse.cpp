@@ -1,14 +1,19 @@
 #include <stdlib.h>
+#include <string>
 #include "Keyboard.hpp"
 #include "morse.hpp"
 
 int main(void) {
 
-    Keyboard keyboard;
+    std::string message;
 
+    Keyboard keyboard;
     keyboard.init();
 
-    text2morse("AB BA", keyboard);
+    std::cout << "Write a message to convert into Morse: " << std::endl;
+
+    std::getline(std::cin, message);
+    text2morse(message, keyboard);
 
     keyboard.deinit();
 

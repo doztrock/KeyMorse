@@ -30,7 +30,7 @@ void text2morse(std::string text, Keyboard keyboard) {
 
     for (unsigned int index = 0; index < text.size(); index++) {
 
-        letter = text.at(index);
+        letter = toupper(text.at(index));
         indexMorse = getLetterIndexHumanAlphabet(letter);
 
         if (letter != ' ') {
