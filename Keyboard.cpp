@@ -36,6 +36,11 @@ void Keyboard::deinit() {
  */
 void Keyboard::turnOn(void) {
 
+    if (LED == K_SCROLLLOCK) {
+        turnOnScrollLock();
+        return;
+    }
+
     if (ioctl(this->descriptor, KDSKBLED, LED) == ERROR) {
         perror("Error turning on...");
         return;
@@ -48,6 +53,11 @@ void Keyboard::turnOn(void) {
  * Turn On the led
  */
 void Keyboard::turnOff(void) {
+
+    if (LED == K_SCROLLLOCK) {
+        turnOffScrollLock();
+        return;
+    }
 
     this->getStatus();
 
@@ -67,5 +77,17 @@ void Keyboard::getStatus() {
         perror("Error getting status...");
         return;
     }
+
+}
+
+void Keyboard::turnOnScrollLock() {
+
+    system("xset led named \"Scroll Lock\"");
+
+}
+
+void Keyboard::turnOffScrollLock() {
+
+    system("xset -led named \"Scroll Lock\"");
 
 }
