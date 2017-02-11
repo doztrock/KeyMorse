@@ -42,8 +42,11 @@ If you want to use KeyMorse:
 Write me an e-mail to <ivan.botero@protonmail.ch> put your idea in the subject.
 Enjoy KeyMorse.
 =======
-Morse Code at Keyboard
 
+
+
+
+* * *
 
 
 
@@ -90,7 +93,10 @@ Si quieres usar KeyMorse:
 Escribeme a <ivan.botero@protonmail.ch> indicando en el asunto, tu peticion.
 Disfruta KeyMorse.
 =======
-Codigo Morse en el teclado.
+
+
+
+* * *
 
 
 
@@ -138,4 +144,3 @@ Si vous voulez utiliser KeyMorse:
 Ecrivez un message à <ivan.botero@protonmail.ch> en me dissant votre idee pour le logiciel.
 Profitez KeyMorse.
 =======
-Morse Code sur ton clavier.
