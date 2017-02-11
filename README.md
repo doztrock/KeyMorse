@@ -40,8 +40,8 @@ If you want to use KeyMorse:
 ## ¿Bugs? ¿Do you have an improvement?
 
 Write me an e-mail to <ivan.botero@protonmail.ch> put your idea in the subject.
-Enjoy KeyMorse.
-=======
+### Enjoy KeyMorse.
+
 
 
 
@@ -91,8 +91,8 @@ Si quieres usar KeyMorse:
 ## ¿Errores? ¿Quieres aportar una idea?
 
 Escribeme a <ivan.botero@protonmail.ch> indicando en el asunto, tu peticion.
-Disfruta KeyMorse.
-=======
+### Disfruta KeyMorse.
+
 
 
 
@@ -142,5 +142,4 @@ Si vous voulez utiliser KeyMorse:
 ## ¿Erreurs? ¿Vous avez des idees pour l'ameliorer?
 
 Ecrivez un message à <ivan.botero@protonmail.ch> en me dissant votre idee pour le logiciel.
-Profitez KeyMorse.
-=======
+### Profitez KeyMorse.
